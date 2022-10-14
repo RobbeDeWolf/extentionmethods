@@ -1,0 +1,15 @@
+﻿@model PersonResult
+
+@{
+	ViewData["Title"] = "Delete Person";
+}
+
+<h1>Delete Person</h1>
+
+<form method="post">
+    <div asp-validation-summary="All"></div>
+
+    <p>Are you sure you want to delete @Model.FirstName @Model.LastName?</p>
+    <a class="btn btn-light" asp-action="Index">No</a>
+    <button class="btn btn-danger" type="submit">Yes</button>
+</form>
